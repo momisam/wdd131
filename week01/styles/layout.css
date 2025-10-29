@@ -1,0 +1,65 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use grid layout for the page */
+body {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* main area wider than aside */
+  grid-template-rows: auto 1fr auto; /* header, content, footer */
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header area */
+header {
+  grid-area: header;
+  background-color: #333333; /* dark gray */
+  color: white;
+  padding: 1rem;
+}
+
+/* Navigation bar inside header */
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000; /* black */
+  padding: 1rem;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main section */
+main {
+  grid-area: main;
+  background-color: #cccccc; /* light gray */
+  padding: 1rem;
+}
+
+/* Aside section */
+aside {
+  grid-area: aside;
+  background-color: white;
+  padding: 1rem;
+}
+
+/* Footer section */
+footer {
+  grid-area: footer;
+  background-color: #333333; /* dark gray */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
