@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Verdana", "Arial", sans-serif;
+  font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #f5f7fa;
   color: #222;
@@ -76,21 +76,16 @@ nav a:hover {
 }
 
 /* ===============================
-   Layout: Main + Aside
+   Layout: Grid for Main
 ================================*/
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   margin: 1.5rem 0;
-  gap: 1rem;
 }
 
-/* ===============================
-   About Me Section
-================================*/
-.about {
-  flex: 1 1 60%;
+.card {
   background-color: white;
   padding: 1.5rem;
   border: 1px solid #ccc;
@@ -98,7 +93,11 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.about h2 {
+/* ===============================
+   About Me Section
+================================*/
+.about h2,
+.resources h2 {
   background-color: #1b3b5f;
   color: white;
   padding: 0.6rem;
@@ -114,7 +113,6 @@ main {
   flex-wrap: wrap;
 }
 
-/* ====== Updated Image Styling (Rectangle) ====== */
 .about-content img {
   width: 220px;
   height: auto;
@@ -134,37 +132,19 @@ main {
 }
 
 /* ===============================
-   Aside Section
+   Resources Section
 ================================*/
-aside {
-  flex: 1 1 35%;
-  background-color: white;
-  padding: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-aside h2 {
-  background-color: #1b3b5f;
-  color: #fff;
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
-aside ul {
+.resources ul {
   list-style-type: disc;
   margin-left: 1.2rem;
 }
 
-aside a {
+.resources a {
   text-decoration: none;
   color: #1b3b5f;
 }
 
-aside a:hover {
+.resources a:hover {
   text-decoration: underline;
   color: #f8d74a;
 }
@@ -195,7 +175,7 @@ footer p {
   }
 
   main {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .about-content {
@@ -207,10 +187,5 @@ footer p {
     margin-bottom: 1rem;
     width: 100%;
     max-width: 350px;
-  }
-
-  .about,
-  aside {
-    flex: 1 1 100%;
   }
 }

@@ -4,13 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Femi Moses">
-  <meta name="description" content="The Home page of Assignment of WDD 131 course">
-  <title>Home | WDD 131</title>
+  <meta name="description" content="WDD 131 Dynamic Web Fundamentals home page by Femi Moses — exploring web development concepts including HTML, CSS, JavaScript, and responsive design.">
+  <title>WDD 131 Dynamic Web Fundamentals - Femi Moses</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JavaScript with defer -->
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>WDD 131: Dynamic Web Fundamentals - <span>Femi S. Moses</span></h1>
+    <h1>
+      <span id="course-title">WDD 131: Dynamic Web Fundamentals</span> - Femi S. Moses
+    </h1>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="#">LinkedIn</a></li>
@@ -23,7 +35,7 @@
 
   <main>
     <!-- About Me Section -->
-    <div class="about">
+    <section class="card about">
       <h2>About Me</h2>
       <div class="about-content">
         <img 
@@ -39,10 +51,10 @@
           Outside of coding, I love exploring new technologies and collaborating with others.
         </p>
       </div>
-    </div>
+    </section>
 
     <!-- Web Dev Resources -->
-    <aside>
+    <section class="card resources">
       <h2>Web Dev Resources</h2>
       <ul>
         <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
@@ -51,14 +63,12 @@
         <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
         <li><a href="https://www.python.org/about/gettingstarted/" target="_blank">Python for Beginners</a></li>
       </ul>
-    </aside>
+    </section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> 🌸 Femi Samuel Moses 🌸 Lagos, Nigeria</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
-
-  <script src="scripts/getdates.js"></script>
 </body>
 </html>
