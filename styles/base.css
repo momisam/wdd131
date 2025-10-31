@@ -1,22 +1,44 @@
 /* ===============================
    General Page Settings
 ================================*/
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Verdana", "Arial", sans-serif;
-    line-height: 1.6;
-    background-color: #f5f7fa;
-    color: #222;
-    max-width: 1200px;
-    margin: 0 auto
+  font-family: "Verdana", "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #222;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
+/* ===============================
+   Header
+================================*/
+header {
+  background-color: #1b3b5f;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+header h1 span {
+  color: #f8d74a;
+}
+
+/* ===============================
+   Navigation Bar
+================================*/
 nav {
   background-color: #2b2b2b;
 }
@@ -25,20 +47,20 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: stretch;  /* makes all items equal height */
+  align-items: stretch;
   margin: 0;
   padding: 0;
 }
 
 nav li {
-  flex: 1; /* each menu item fills equal space across */
+  flex: 1;
 }
 
 nav a {
-  display: block; /* makes <a> fill the full <li> */
+  display: block;
   width: 100%;
   height: 100%;
-  padding: 1rem 0; /* controls height of bar */
+  padding: 1rem 0;
   text-align: center;
   color: #fff;
   text-decoration: none;
@@ -46,126 +68,149 @@ nav a {
   transition: all 0.3s ease;
 }
 
-/* Hover Effect (Rubric #6 compliant — no layout shift) */
 nav a:hover {
-  background-color: #444; /* subtle hover effect */
+  background-color: #444;
   color: #f8d74a;
   border-bottom: 2px solid #f8d74a;
+  transform: scale(1.05);
 }
 
 /* ===============================
    Layout: Main + Aside
 ================================*/
-
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1.5rem 0;
-    gap: 1rem;
-}
-
-/* Content Section */
-main > div {
-    flex: 1 1 60%;
-    background-color: white;
-    padding: 1.2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Aside Section */
-aside {
-    flex: 1 1 35%;
-    background-color: white;
-    padding: 1.2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-aside h2 {
-    background-color: #1b3b5f;
-    color: #fff;
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-aside ul {
-    list-style-type: disc;
-    margin-left: 1.2rem;
-}
-
-aside a {
-  color: #1b3b5f;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-aside a:hover {
-  color: #f8d74a;
-  text-decoration: underline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  gap: 1rem;
 }
 
 /* ===============================
-   About Me Section Styling
+   About Me Section
 ================================*/
-
-main h2 {
-    background-color: #1b3b5f;
-    color: white;
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+.about {
+  flex: 1 1 60%;
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-main img {
-    width: 80px;
-    margin: 5px;
-    border-radius: 5px
+.about h2 {
+  background-color: #1b3b5f;
+  color: white;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ====== Updated Image Styling (Rectangle) ====== */
+.about-content img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #1b3b5f;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
+  flex: 1;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Aside Section
+================================*/
+aside {
+  flex: 1 1 35%;
+  background-color: white;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+  background-color: #1b3b5f;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+aside ul {
+  list-style-type: disc;
+  margin-left: 1.2rem;
+}
+
+aside a {
+  text-decoration: none;
+  color: #1b3b5f;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  color: #f8d74a;
 }
 
 /* ===============================
    Footer
 ================================*/
-
 footer {
-    background-color: #1b3b5f;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border-top: 4px solid #f8d74a;
+  background-color: #1b3b5f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 4px solid #f8d74a;
 }
 
 footer p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-}
-
-footer small {
-    color: #f8d74a;
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
 }
 
 /* ===============================
-   Responsive Design (For smaller screens)
+   Responsive Design
 ================================*/
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-
-main {
+  nav ul {
     flex-direction: column;
-}
+  }
 
-main > div,
-aside {
+  main {
+    flex-direction: column;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .about,
+  aside {
     flex: 1 1 100%;
-}
+  }
 }

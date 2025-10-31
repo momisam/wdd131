@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoader", () => {
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModifield").textContent = document.lastModifield;
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
 });

@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Femi Moses">
-    <meta name="Description" content="The Home page of Assignment of WDD 131 course">
-    <title>Home | WDD 131 </title>
-    <link rel="stylesheet" href="styles/base.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Femi Moses">
+  <meta name="description" content="The Home page of Assignment of WDD 131 course">
+  <title>Home | WDD 131</title>
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-    <header>
-        <h1>WDD 131: Dynamic Web Fundamental - Femi S. Moses </h1>
-        <nav>
-            <ul>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Canvas</a></li>
-                <li><a href="#">Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <h2>About Me</h2>
-            <p>I’m Moses Samuel, a Software Developer from Lagos, Nigeria, passionate about using technology to solve real-world problems.
-I hold a National Diploma in Aircraft Engineering and a Higher National Diploma in Mechanical Engineering.
-I’m currently pursuing a degree in Software Development at BYU Pathway Idaho.
-My studies focus on full-stack development with Python, JavaScript, Node.js, and Django.
-I enjoy learning by building real projects that turn ideas into working applications.
-My goal is to become a well-rounded developer who creates impactful, user-centered solutions.
-Outside of coding, I love exploring new technologies and collaborating with others.</p>
-            <img src="images/python.jpg" alt="Python logo">
-            <img src="images/react.jpg" alt="React logo">
-            <img src="images/django.jpg" alt="Django logo">
-            <img src="images/mysql.jpg" alt="MySql logo">
-        </div>
-    </main>
-    <aside>
-        <div>
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-                <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-                <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
-                <li><a href="https://www.python.org/about/gettingstarted/" target="_blank">Python for Beginners</a></li>
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span>Femi S. Moses</span></h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Canvas</a></li>
+        <li><a href="#">Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            </ul>
-        </div>
+  <main>
+    <!-- About Me Section -->
+    <div class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img 
+          src="images/profile.jpeg" 
+          alt="Profile picture of Femi Moses">
+        <p>
+          I’m Moses Samuel, a Software Developer from Lagos, Nigeria, passionate about using technology to solve real-world problems. 
+          I hold a National Diploma in Aircraft Engineering and a Higher National Diploma in Mechanical Engineering. 
+          I’m currently pursuing a degree in Software Development at BYU Pathway Idaho. 
+          My studies focus on full-stack development with Python, JavaScript, Node.js, and Django. 
+          I enjoy learning by building real projects that turn ideas into working applications. 
+          My goal is to become a well-rounded developer who creates impactful, user-centered solutions. 
+          Outside of coding, I love exploring new technologies and collaborating with others.
+        </p>
+      </div>
+    </div>
+
+    <!-- Web Dev Resources -->
+    <aside>
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
+        <li><a href="https://www.python.org/about/gettingstarted/" target="_blank">Python for Beginners</a></li>
+      </ul>
     </aside>
-    <footer>
-  <p>&copy; <span id="year"></span> 🌸 Femi Samuel Moses 🌸 Lagos, Nigeria</p>
-  <p>Last Modification: <span id="lastModified"></span></p>
-</footer>
-<script src="scripts/getdates.js"></script>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 🌸 Femi Samuel Moses 🌸 Lagos, Nigeria</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/getdates.js"></script>
 </body>
 </html>
