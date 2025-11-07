@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #fdfdfd;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Header */
@@ -13,10 +14,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #005b96;
+  background-color: #005b96; /* consistent deep blue tone */
   color: white;
 }
 
+/* Hamburger button (mobile only) */
 #menu {
   background: none;
   border: none;
@@ -25,59 +27,83 @@ header {
   cursor: pointer;
 }
 
-/* Nav hidden in mobile by default */
+/* Navigation (mobile first: hidden by default) */
 nav {
   display: none;
   flex-direction: column;
   background-color: #007acc;
   text-align: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
-nav a {
-  padding: 0.75rem;
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #004f7a;
-}
-
-/* Show nav when "open" class is toggled */
+/* Show nav when "open" class is toggled (mobile) */
 nav.open {
   display: flex;
 }
 
+/* Nav link styling */
+nav a {
+  padding: 0.75rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #004f7a;
+  text-decoration: underline;
+}
+
 /* Main content */
 main {
-  max-width: 90%;
-  margin: 1rem auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
-main h2 { text-align: center; margin: 1rem 0; }
 
+main h2 {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #003b5c;
+}
+
+/* Album grid (mobile: 1 column) */
 .album {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  justify-items: center;
 }
 
+/* Figure cards */
 figure {
   margin: 0;
-  border: 2px solid #ddd;
+  background: white;
   border-radius: 8px;
   overflow: hidden;
-  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+figure:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 figure img {
   width: 100%;
+  height: auto;
   display: block;
+  border-bottom: 1px solid #eee;
 }
 
 figcaption {
   padding: 0.5rem;
   text-align: center;
   background-color: #fafafa;
+  font-weight: 500;
+  color: #222;
 }
 
 /* Footer */
@@ -86,4 +112,36 @@ footer {
   padding: 1rem;
   background-color: #005b96;
   color: white;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* --- Larger Screen Adjustments (optional backup if temples-large.css fails to load) --- */
+@media only screen and (min-width: 32rem) {
+  /* Hide hamburger on larger screens */
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: auto;
+  }
+
+  nav a {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Grid with 3 columns for larger screens */
+  .album {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
 }
