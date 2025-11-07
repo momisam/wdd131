@@ -53,6 +53,7 @@ main {
   max-width: 90%;
   margin: 1rem auto;
 }
+main h2 { text-align: center; margin: 1rem 0; }
 
 .album {
   display: grid;
