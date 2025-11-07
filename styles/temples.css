@@ -1,0 +1,88 @@
+/* Google font and color theme */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #005b96;
+  color: white;
+}
+
+#menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Nav hidden in mobile by default */
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #007acc;
+  text-align: center;
+}
+
+nav a {
+  padding: 0.75rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #004f7a;
+}
+
+/* Show nav when "open" class is toggled */
+nav.open {
+  display: flex;
+}
+
+/* Main content */
+main {
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #005b96;
+  color: white;
+}

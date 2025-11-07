@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Femi Samuel Moses">
+  <meta name="description" name="Temple album - WDD131 Dynamic Web Development Assignment">
+  <title>Temple Album</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS: mobile first -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu" aria-label="Menu">&#9776;</button>
+
+    <nav id="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Beautiful Temples Around the World</h2>
+
+    <section class="album">
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 1">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 2">
+        <figcaption>Accra Ghana Temple</figcaption>
+      </figure>
+      <!-- Repeat for 9 total figures -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Temple Album | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
