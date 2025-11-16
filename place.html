@@ -4,79 +4,95 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="author" content="Femi Samuel Moses">
-  <meta name="description" content="Week 3 palce assignment by Femi samuel Moses">
+  <meta name="description" content="WDD 131 Week 3 place assignment by Femi Samuel Moses. A detailed country profile of Nigeria showing data, weather, and responsive images.">
   <title>Nigeria — Country Profile</title>
   <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Nigeria</h1>
-  </header>
-  <div class="strip"></div>
 
-  <main class="wrap">
-    <section class="hero">
-      <picture>
-        <source media="(min-width:881px)" srcset="images/hero-wide.jpg">
-        <img alt="Nigeria landscape" class="bg" src="images/hero-mobile.jpg">
-      </picture>
+<header>
+  <h1>Nigeria</h1>
+</header>
 
-      <div class="overlay-left" aria-hidden="true">
-        <h3>Data</h3>
-        <div class="card-fields">
-          <div class="field"><strong>Area:</strong> 923,768 sq km</div>
-          <div class="field"><strong>Population:</strong> 216,746,934</div>
-          <div class="field"><strong>Capital:</strong> Abuja</div>
-          <div class="field"><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</div>
-          <div class="field"><strong>Currency:</strong> Nigerian Naira (₦)</div>
-          <div class="field"><strong>Time Zone:</strong> WAT (UTC+1)</div>
-          <div class="field"><strong>Calling Code:</strong> +234</div>
-          <div class="field"><strong>Internet TLD:</strong> .ng</div>
-        </div>
+<div class="strip"></div>
+
+<main class="wrap">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <picture>
+      <source media="(min-width:881px)" srcset="images/hero-wide-860-q40.webp">
+      <img alt="Nigeria landscape" class="bg" src="images/hero-mobile.webp">
+    </picture>
+
+    <!-- DESKTOP OVERLAY: DATA CARD -->
+    <div class="overlay-left" aria-hidden="true">
+      <h3>Data</h3>
+      <div class="card-fields">
+        <div class="field"><strong>Area:</strong> 923,768 sq km</div>
+        <div class="field"><strong>Population:</strong> 216,746,934</div>
+        <div class="field"><strong>Capital:</strong> Abuja</div>
+        <div class="field"><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</div>
+        <div class="field"><strong>Currency:</strong> Nigerian Naira (₦)</div>
+        <div class="field"><strong>Time Zone:</strong> WAT (UTC+1)</div>
+        <div class="field"><strong>Calling Code:</strong> +234</div>
+        <div class="field"><strong>Internet TLD:</strong> .ng</div>
       </div>
-
-      <div class="overlay-right" aria-hidden="true">
-        <h3>Weather <span class="weather-emoji">☀️</span></h3>
-        <div class="card-fields">
-          <div class="field"><strong>Temperature:</strong> <span id="temp">28</span> °C</div>
-          <div class="field"><strong>Conditions:</strong> Partly Cloudy</div>
-          <div class="field"><strong>Wind:</strong> 12 km/h</div>
-          <div class="field"><strong>Wind Chill:</strong> 26 °C</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="content">
-        <div class="data-card">
-          <h2>Data</h2>
-          <div class="field"><strong>Area:</strong> 923,768 sq km</div>
-          <div class="field"><strong>Population:</strong> 216,746,934</div>
-          <div class="field"><strong>Capital:</strong> Abuja</div>
-          <div class="field"><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</div>
-          <div class="field"><strong>Currency:</strong> Nigerian Naira (₦)</div>
-          <div class="field"><strong>Time Zone:</strong> WAT (UTC+1)</div>
-          <div class="field"><strong>Calling Code:</strong> +234</div>
-          <div class="field"><strong>Internet TLD:</strong> .ng</div>
-        </div>
-
-        <div class="weather-card">
-          <h2>Weather <span class="weather-emoji">☀️</span></h2>
-          <div class="field"><strong>Temperature:</strong> <span id="temp2">28</span> °C</div>
-          <div class="field"><strong>Conditions:</strong> Partly Cloudy</div>
-          <div class="field"><strong>Wind:</strong> 12 km/h</div>
-          <div class="field"><strong>Wind Chill:</strong> 26 °C</div>
-        </div>
-      </div>
-      <div></div>
-    </section>
-
-    <div class="page-footer">
-      <div>©2025 🌸 Femi Samuel Moses 🌸 Nigeria</div>
-      <div class="modified">Last Modification: <span id="modified"></span></div>
     </div>
-  </main>
 
-  <script src="scripts/place.js"></script>
+    <!-- DESKTOP OVERLAY: WEATHER CARD -->
+    <div class="overlay-right" aria-hidden="true">
+      <h3>Weather <img src="images/sun.svg" alt="sun icon" class="icon"></h3>
+      <div class="card-fields">
+        <div class="field"><strong>Temperature:</strong> <span id="temp">28</span> °C</div>
+        <div class="field"><strong>Conditions:</strong> Partly Cloudy</div>
+        <div class="field"><strong>Wind:</strong> 12 km/h</div>
+        <div class="field"><strong>Wind Chill:</strong> 26 °C</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- GRID SECTION FOR MOBILE VIEW -->
+  <section class="grid">
+
+    <div class="content">
+
+      <!-- MOBILE DATA CARD -->
+      <div class="data-card">
+        <h2>Data</h2>
+        <div class="field"><strong>Area:</strong> 923,768 sq km</div>
+        <div class="field"><strong>Population:</strong> 216,746,934</div>
+        <div class="field"><strong>Capital:</strong> Abuja</div>
+        <div class="field"><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</div>
+        <div class="field"><strong>Currency:</strong> Nigerian Naira (₦)</div>
+        <div class="field"><strong>Time Zone:</strong> WAT (UTC+1)</div>
+        <div class="field"><strong>Calling Code:</strong> +234</div>
+        <div class="field"><strong>Internet TLD:</strong> .ng</div>
+      </div>
+
+      <!-- MOBILE WEATHER CARD -->
+      <div class="weather-card">
+        <h2>Weather <img src="images/sun.svg" alt="sun icon" class="icon"></h2>
+        <div class="field"><strong>Temperature:</strong> <span id="temp2">28</span> °C</div>
+        <div class="field"><strong>Conditions:</strong> Partly Cloudy</div>
+        <div class="field"><strong>Wind:</strong> 12 km/h</div>
+        <div class="field"><strong>Wind Chill:</strong> 26 °C</div>
+      </div>
+
+    </div>
+
+    <!-- empty right-hand grid cell for layout -->
+    <div></div>
+
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  <div>©2025 🌸 Femi Samuel Moses 🌸 Nigeria</div>
+  <div class="modified">Last Modification: <span id="modified"></span></div>
+</footer>
 </body>
 </html>
