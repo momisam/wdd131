@@ -28,7 +28,15 @@ header {
   padding: 20px;
   text-align: center;
 }
-header h1 { margin: 0; font-size: 28px; }
+header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: white;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
 .strip { height: 10px; background: var(--green); }
 
 /* Page wrapper */
