@@ -2,9 +2,9 @@
 
 /* Color variables */
 :root {
-  --accent: #c6323b;
+  --accent: #2f7f57;
   --accent-dark: #a92a30;
-  --green: #2f7f57;
+  --green: #fefcfc;
   --muted: #f3f9f2;
   --card-bg: rgba(255,255,255,0.9);
   --max-width: 1100px;
@@ -165,11 +165,6 @@ header h1 {
     margin-top: 20px;
   }
 
-  .wide-caption {
-    text-align: center;
-    padding: 10px;
-    color: #333;
-  }
 }
 
 /* Shared elements */
