@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Plan — Mama's Munchies</title>
+  <!-- Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-orange: #E97F02; /* Primary accent — buttons, CTAs */
+      --brand-navy:   #2B2D42; /* Headings, nav */
+      --brand-cream:  #F8F9FA; /* Page background */
+      --muted:        #6C757D; /* Secondary text */
+      --max-width:    900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: 'Lora', serif;
+      background:var(--brand-cream);
+      color:var(--brand-navy);
+      margin:24px;display:flex;justify-content:center;
+    }
+    .container{width:100%;max-width:var(--max-width);background:white;border-radius:12px;padding:28px;box-shadow:0 6px 20px rgba(43,45,66,.08)}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,var(--brand-orange),#FFB86C);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:'Montserrat',sans-serif}
+    h1{font-family:'Montserrat',sans-serif;color:var(--brand-navy);margin:0;font-size:1.4rem}
+    p.lead{color:var(--muted);margin-top:6px}
+    section{margin-top:20px}
+    h2{font-family:'Montserrat',sans-serif;color:var(--brand-navy);margin-bottom:8px}
+    .swatches{display:flex;gap:12px;align-items:center}
+    .swatch{width:92px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .swatch--orange{background:var(--brand-orange)}
+    .swatch--navy{background:var(--brand-navy)}
+    .swatch--cream{background:var(--brand-cream);color:var(--brand-navy);border:1px solid #e6e6e6}
+    code{background:#f3f4f6;padding:4px 6px;border-radius:6px;color:#111}
+    /* SVG wireframe styles */
+    .wireframes{display:flex;gap:18px;flex-wrap:wrap}
+    .card{background:#fff;border-radius:10px;padding:12px;flex:1;min-width:260px;box-shadow:0 2px 8px rgba(43,45,66,.04)}
+    .list{margin:0;padding-left:18px}
+    .check{color:var(--brand-navy);font-weight:600}
+    /* Simple responsive note */
+    @media (max-width:520px){.wireframes{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo">MM</div>
+      <div>
+        <h1>Mama's Munchies</h1>
+        <p class="lead">Handmade snacks and treats — traditional recipes, locally sourced ingredients, delivered with love.</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Site Name &amp; Branding</h2>
+      <p><strong>Site name:</strong> Mama's Munchies</p>
+      <p><strong>Why this name?</strong> Short, memorable, and communicates handcrafted, home-style snacks and warmth — fits a local business selling homemade treats.</p>
+      <p><strong>Optional domain (suggestion):</strong> <code>mamasmunchies.ng</code> (or <code>mamasmunchies.com</code>)</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The website will serve as a small local storefront and marketing hub: show product catalog with prices, accept customer orders via a contact/order form, collect customer reviews, and showcase product photos in an interactive JavaScript gallery. The site will be responsive and optimized for quick load on mobile devices.</p>
+      <ul class="list">
+        <li>Primary goals: increase local visibility, collect orders, and present the product range clearly.</li>
+        <li>Secondary goals: collect testimonials and capture email leads for occasional promotions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Scenarios (target audience questions)</h2>
+      <ol>
+        <li>"Do you deliver within my neighborhood and how do I place an order?" — Answer: Delivery area map, order form with contact and pickup/delivery options.</li>
+        <li>"Which snacks are nut-free and what are your prices?" — Answer: Product catalog page with filters (allergens) and visible pricing.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Color Scheme</h2>
+      <div class="swatches">
+        <div class="swatch swatch--orange">#E97F02</div>
+        <div class="swatch swatch--navy">#2B2D42</div>
+        <div class="swatch swatch--cream">#F8F9FA</div>
+      </div>
+      <p style="margin-top:10px">Usage:</p>
+      <ul class="list">
+        <li><strong>Primary (accent):</strong> <span class="check">#E97F02</span> — buttons, CTAs, highlights, price tags.</li>
+        <li><strong>Headings &amp; nav:</strong> <span class="check">#2B2D42</span> — primary text color for strong contrast.</li>
+        <li><strong>Background:</strong> <span class="check">#F8F9FA</span> — page background, cards remain white for readability.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p>Selected Google Fonts (kept minimal for clarity):</p>
+      <ul class="list">
+        <li><strong>Montserrat</strong> — headings, navigation, CTAs (use 600–800 weight).</li>
+        <li><strong>Lora</strong> — body copy and product descriptions for a warm, readable tone.</li>
+      </ul>
+      <p>Usage example: <em>H1/H2 — Montserrat; Body — Lora; Buttons — Montserrat (bold)</em>.</p>
+    </section>
+
+    <section>
+      <h2>Wireframe (Home page)</h2>
+      <p>Below are simple wireframe sketches for mobile and desktop. These are conceptual blocks — content and exact spacing will be adjusted during design/development.</p>
+      <div class="wireframes">
+        <div class="card">
+          <h3 style="margin-top:0;font-family:'Montserrat',sans-serif">Mobile (narrow)</h3>
+          <!-- Simple SVG wireframe -->
+          <svg width="260" height="380" viewBox="0 0 260 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="6" width="248" height="56" rx="8" fill="#fff" stroke="#e6e6e6"/>
+            <text x="20" y="36" font-family="Montserrat, sans-serif" font-size="12" fill="#2B2D42">Header: logo + menu</text>
+            <rect x="12" y="72" width="236" height="120" rx="6" fill="#f3f3f5" />
+            <text x="18" y="92" font-family="Lora, serif" font-size="11" fill="#6C757D">Hero / Gallery (swipe)</text>
+            <rect x="12" y="200" width="236" height="28" rx="4" fill="#fff" stroke="#e6e6e6" />
+            <text x="18" y="218" font-family="Montserrat, sans-serif" font-size="11" fill="#2B2D42">Search / filter</text>
+            <rect x="12" y="236" width="110" height="72" rx="6" fill="#fff" stroke="#e6e6e6" />
+            <rect x="138" y="236" width="110" height="72" rx="6" fill="#fff" stroke="#e6e6e6" />
+            <text x="18" y="256" font-family="Lora, serif" font-size="11" fill="#6C757D">Product cards (image + price)</text>
+            <rect x="12" y="320" width="236" height="36" rx="6" fill="#E97F02" />
+            <text x="120" y="343" font-family="Montserrat, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Primary CTA</text>
+          </svg>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0;font-family:'Montserrat',sans-serif">Desktop (wide)</h3>
+          <svg width="360" height="260" viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="8" width="344" height="46" rx="6" fill="#fff" stroke="#e6e6e6"/>
+            <text x="18" y="36" font-family="Montserrat, sans-serif" font-size="12" fill="#2B2D42">Top nav: logo | categories | contact</text>
+            <rect x="12" y="64" width="232" height="140" rx="6" fill="#f3f3f5" />
+            <rect x="252" y="64" width="100" height="140" rx="6" fill="#fff" stroke="#e6e6e6" />
+            <text x="18" y="90" font-family="Lora, serif" font-size="12" fill="#6C757D">Hero gallery / featured product</text>
+            <text x="258" y="86" font-family="Lora, serif" font-size="11" fill="#6C757D">Sidebar: Order form / hours</text>
+            <rect x="12" y="214" width="344" height="32" rx="6" fill="#E97F02" />
+            <text x="184" y="236" font-family="Montserrat, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Shop / Place Order CTA</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pages &amp; Content Outline</h2>
+      <ul class="list">
+        <li>Home — hero/gallery, featured products, short about, CTA to order.</li>
+        <li>Products — catalog grid, filters (allergens, price), product details, prices.</li>
+        <li>About Us — story, sourcing, small team / contact info.</li>
+        <li>Order / Contact — simple form (name, phone, address, order details), delivery/pickup options.</li>
+        <li>Reviews — customer testimonials, star ratings.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>CSS &amp; Implementation Notes</h2>
+      <p>Keep CSS modular: <code>base.css</code>, <code>layout.css</code>, <code>components.css</code>. Use modern CSS (flexbox + grid) and a small JS for gallery and form validation. Make images optimized (compressed WebP) and ensure fast mobile loads.</p>
+    </section>
+
+    <section>
+      <h2>Testing &amp; Self-Check</h2>
+      <p>Run the following checks during development:</p>
+      <ul class="list">
+        <li>HTML validator (W3C) — ensure valid markup.</li>
+        <li>Accessibility: use axe or Lighthouse to check contrast, roles, form labels, and keyboard navigation.</li>
+        <li>SEO: meta title, description, structured data for products where appropriate.</li>
+        <li>Performance: Lighthouse (keep mobile CLS, TTFB and LCP within good ranges), compress images, enable caching.</li>
+        <li>Cross-browser: quick test on Chrome, Firefox, and mobile Safari.</li>
+      </ul>
+    </section>
+
+    <footer style="margin-top:20px;border-top:1px solid #eef2f5;padding-top:14px;font-size:13px;color:var(--muted)">Prepared by: <strong>Mama's Munchies — Site Plan</strong> &nbsp;•&nbsp; Date: Nov 27, 2025</footer>
+  </div>
+</body>
+</html>
